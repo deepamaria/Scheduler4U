@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function ErrorPage() {
-  return (
-    <div>ErrorPage
-        <div className="hero min-h-screen bg-base-200">
+    return (
+        <div className='ErrorPage'>
+        <div className="hero h-full bg-base-200">
             <div className="hero-content text-center">
                 <div className="max-w-md">
                 <h1 className="text-5xl font-bold">OOPLAAA!!! </h1>
@@ -12,7 +12,7 @@ function ErrorPage() {
                         <p className="py-6"></p>
                 
                 <Link to={"/profile"}>
-                <button className="btn btn-primary">Your Profile Page</button>
+                <button className="btn btn-primary">Back to Profile Page</button>
                 </Link>
                 
                 </div>

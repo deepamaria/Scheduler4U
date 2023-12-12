@@ -10,14 +10,16 @@ import ProfilePage from './components/ProfilePage';
 import MyCalendar from './components/MyCalendar';
 import AddEventPage from './components/AddEventPage';
 import ErrorPage from './components/ErrorPage';
+import MainContainer from './components/MainContainer';
 
 function App() {
   return (
     <div className="App">
-      God is Great
       <Nav/>
-      <StartingPage/>
-      <Footer/>
+      {/* <MainContainer>
+</MainContainer> */}
+
+      God is Great
 
       <Routes>
         <Route path='/' element={<StartingPage/>} />
@@ -28,6 +30,8 @@ function App() {
         <Route path='/addevent' element={<AddEventPage/>} />
         <Route path='/*' element={<ErrorPage/>} />
       </Routes>
+      
+      <Footer/>
     </div>
   );
 }
