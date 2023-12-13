@@ -20,7 +20,7 @@ function Nav() {
   </div>
   <div className="navbar-center h-full">
     <img className='img h-full' src='logo.png' alt='logo'></img>
-    <a className="btn btn-ghost text-xl">Scheduler4U</a>
+    <a className="btn btn-ghost text-xl">Godis Great | Scheduler4U</a>
   </div>
   <div className="navbar-end">
 

@@ -19,7 +19,7 @@ function App() {
       {/* <MainContainer>
 </MainContainer> */}
 
-      God is Great
+      {/* God is Great */}
 
       <Routes>
         <Route path='/' element={<StartingPage/>} />
