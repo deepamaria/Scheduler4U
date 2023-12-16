@@ -10,14 +10,12 @@ import ProfilePage from './components/ProfilePage';
 import MyCalendar from './components/MyCalendar';
 import AddEventPage from './components/AddEventPage';
 import ErrorPage from './components/ErrorPage';
-import MainContainer from './components/MainContainer';
 
 function App() {
   return (
     <div className="App">
       <Nav/>
-      {/* <MainContainer>
-</MainContainer> */}
+      <div className='MainContainer'>
 
       {/* God is Great */}
 
@@ -30,6 +28,8 @@ function App() {
         <Route path='/addevent' element={<AddEventPage/>} />
         <Route path='/*' element={<ErrorPage/>} />
       </Routes>
+      
+      </div>
       
       <Footer/>
     </div>

@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 function Nav() {
   return (
     <div className='Nav'>
-        <div className="navbar h-full bg-base-100">
+        <div className="navbar h-full bg-neutral text-neutral-content">
           <div className="navbar-start h-full">
-            <img className='img h-full' src='logo.png' alt='logo'></img>
+            {/* <img className='img h-full btn btn-ghost' src='logo.png' alt='logo' ></img> */}
             <a className="btn btn-ghost text-xl">Scheduler4U</a>
           </div>
             
           <div className="navbar-end">
-            <div className="join join-horizontal lg:join-horizontal">
-                <ion-icon size="large" className="join-item" name="globe-outline"></ion-icon>
+            <div className="join join-horizontal lg:join-horizontal ">
+                <ion-icon size="large" className="join-item bg-neutral text-neutral-content" name="globe-outline"></ion-icon>
                 <span><button className='join-item'>
                     <select className="select select-bordered w-full max-w-xs">
                         {/* Language need not be selected only disabled */}
