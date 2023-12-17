@@ -4,7 +4,7 @@ function Todos() {
   return (
     <div>Todos
         <h1>
-            To be continued.....
+            To be continued......
         </h1>
     </div>
   )
