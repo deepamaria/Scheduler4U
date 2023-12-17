@@ -1,7 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function SignUpPage() {
+
+const navigate= useNavigate();
+
+function registerHandler(e){
+  e.preventDefault();
+  function userRegistered( user )
+  {
+  console.log(e.target.fullname.value);
+  console.log(e.target.email.value);
+  console.log(e.target.password.value);
+  console.log( "user has been registered" );
+  }
+
+function gotError( err ) // see more on error handling
+{
+  console.log( "error message - " + err.message );
+  console.log( "error code - " + err.statusCode );
+}
+}
+
+
   return (
     <div className='SignUpPage flex h-full w-full'>
 
