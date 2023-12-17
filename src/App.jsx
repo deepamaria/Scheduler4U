@@ -15,12 +15,15 @@ import Backendless from 'backendless';
 
 function App() {
 
+// state for checking whether a userLoggedIn or not
+const [isuserLoggedIn, setisuserLoggedIn] = useState(false)
+
   Backendless.serverURL = "https://eu-api.backendless.com";
   Backendless.initApp(
     process.env.REACT_APP_APP2ID,
     process.env.REACT_APP_API2KEY
   );
-  
+
   return (
     <div className="App">
       <Nav/>
@@ -31,7 +34,7 @@ function App() {
       <Routes>
         <Route path='/' element={<StartingPage/>} />
         <Route path='/signup' element={<SignUpPage/>} />
-        <Route path='/login' element={<LoginPage/>} />
+        <Route path='/login' element={<LoginPage setisuserLoggedIn={setisuserLoggedIn}/>} />
         <Route path='/profile' element={<ProfilePage/>} />
         <Route path='/calendar' element={<MyCalendar/>} />
         <Route path='/addevent' element={<AddEventPage/>} />
