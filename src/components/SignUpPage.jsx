@@ -47,7 +47,7 @@ navigate("/login")
             <h1 className='text-2xl font-bold text-center'>Sign Up for your Scheduler4U Account</h1>
         <div className="card w-full max-w-sm shadow-2xl bg-cyan-500">
       
-      <form className="card-body">
+      <form onSubmit={registerHandler} className="card-body">
       
       <div className="form-control">
           {/* <label className="label">

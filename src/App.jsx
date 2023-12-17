@@ -2,16 +2,25 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
 import Nav from './components/Nav';
-import StartingPage from './components/StartingPage';
 import Footer from './components/Footer';
+import StartingPage from './components/StartingPage';
 import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import ProfilePage from './components/ProfilePage';
 import MyCalendar from './components/MyCalendar';
 import AddEventPage from './components/AddEventPage';
 import ErrorPage from './components/ErrorPage';
+import Backendless from 'backendless';
+
 
 function App() {
+
+  Backendless.serverURL = "https://eu-api.backendless.com";
+  Backendless.initApp(
+    process.env.REACT_APP_APP2ID,
+    process.env.REACT_APP_API2KEY
+  );
+  
   return (
     <div className="App">
       <Nav/>
