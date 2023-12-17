@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import StartingPage from './components/StartingPage';
@@ -42,7 +42,7 @@ const [event2, setevent2] = useState([{
       })
       .catch((err) => console.log(err));
   }, [isuserLoggedIn]);
-  
+
   return (
     <div className="App">
       <Nav/>

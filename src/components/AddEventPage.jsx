@@ -1,10 +1,12 @@
 import Backendless from 'backendless';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function AddEventPage({setevent2}) {
 
   const navigate=useNavigate();
+
+  const [retrievedEvents, setretrievedEvents] = useState([]);
 
   const addingEvent = (e) => {
     e.preventDefault();
@@ -46,7 +48,7 @@ function AddEventPage({setevent2}) {
             console.log( "new Event instance has been saved" );
             //  set event to old and add the new save event
             console.log("Event saving"+savedObject);
-            // savinsng newobjectdx
+            // saving newobject
             // setevent2(i=>[...i,savedObject])
         })
         .catch( function( error ) {
