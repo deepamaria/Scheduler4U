@@ -89,7 +89,10 @@ function AddEventPage({setevent2}) {
    };
 
   return (
-    <div className='AddEvent flex h-full w-full'>
+    <div className='AddEvent flex flex-col h-full w-full'>
+<div className='loginButton grid place-items-end w-full'>
+<Link to={"/login"}><button className='btn btn-cyan-600 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Log In</button></Link>
+</div> 
 <div className="AddEvent1 card w-full max-w-sm shadow-2xl bg-cyan-500">
       
       <form onSubmit={addingEvent} className="card-body">

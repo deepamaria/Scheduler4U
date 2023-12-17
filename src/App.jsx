@@ -19,12 +19,30 @@ function App() {
 // state for checking whether a userLoggedIn or not
 const [isuserLoggedIn, setisuserLoggedIn] = useState(false)
 
+const [event2, setevent2] = useState([{
+  id: Math.floor(Math.random() * 10000),
+  title: "Event 3",
+  start: "2023-12-28",
+  end: "2023-12-31",
+},]);
+
   Backendless.serverURL = "https://eu-api.backendless.com";
   Backendless.initApp(
     process.env.REACT_APP_APP2ID,
     process.env.REACT_APP_API2KEY
   );
 
+  // useeffect for states change in calendar
+  useEffect(() => {
+    Backendless.Data.of("Event")
+      .find()
+      .then((res) => {
+        console.log(res);
+        setevent2(res);
+      })
+      .catch((err) => console.log(err));
+  }, [isuserLoggedIn]);
+  
   return (
     <div className="App">
       <Nav/>
