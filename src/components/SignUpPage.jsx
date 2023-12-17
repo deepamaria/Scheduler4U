@@ -71,14 +71,14 @@ navigate("/login")
         </div>
 
         <div className="form-control mt-6">
-          <button type='submit' className="btn btn-cyan-600">SignUp</button>
+          <button type='submit' className="btn btn-cyan-600 bg-cyan-600">SignUp</button>
         </div>
         
         <div className='hr flex'>
           <p>OR</p>
         </div>
 
-        <Link to={"/login"}><div className='form-control btn-cyan-600 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Log In</div></Link>
+        <Link to={"/login"}><div className='btn btn-cyan-600 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Log In</div></Link>
 
 
 

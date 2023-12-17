@@ -1,6 +1,6 @@
 import Backendless from 'backendless'
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginPage({setisuserLoggedIn}) {
 
@@ -25,9 +25,12 @@ function LoginPage({setisuserLoggedIn}) {
     function loginHandler(e){
       e.preventDefault();
 
+      // variables to use as parameters for Backendless login function
       const email = e.target.email.value;
       const password = e.target.password.value;
       
+    // code for logging a user to backendless and set the state isLogIn in Localstorage to true, which is the third parameter 
+
       Backendless.UserService.login( email,password, true )
       .then( userLoggedIn )
       .catch( gotError );
@@ -38,8 +41,9 @@ function LoginPage({setisuserLoggedIn}) {
   return (
     <div className='LoginPage flex h-full w-full'>
     <div className='Login h-full w-full'>
-            <h1 className='text-2xl font-bold text-center'>Login to your Account</h1>
-    <div className="card w-full max-w-sm shadow-2xl bg-cyan-600">
+            <h1 className='text-2xl font-bold text-center'>Welcome back to Scheduler4U</h1>
+            <h1 className='text-1xl font-bold text-center'> Login to your Account to get back to your hub for scheduling your Activities</h1>
+    <div className="card w-full max-w-sm shadow-2xl bg-cyan-500">
         <form onSubmit={loginHandler} className="card-body">
         <div className="form-control">
           {/* <label className="label">
@@ -60,9 +64,14 @@ function LoginPage({setisuserLoggedIn}) {
           </label> */}
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-cyan-600">Login</button>
+          <button className="btn btn-cyan-600 bg-cyan-600 ">Login</button>
         </div>
       </form>
+
+      <h1 className='text-1xl text-center'> Don't have an Account?</h1>
+      <Link to={"/signup"}><button className='btn btn-cyan-600 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Sign Up Free</button></Link>
+
+      <br />
     </div>
     </div>
         

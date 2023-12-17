@@ -60,7 +60,7 @@ code {
   align-items: center;
  }
 
- .StartingPage, .SignUpPage, .LoginPage{
+ .StartingPage, .SignUpPage, .LoginPage, .ProfilePage{
   height: 90%;
   width: 92%;
  }
