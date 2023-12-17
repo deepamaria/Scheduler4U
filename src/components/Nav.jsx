@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Nav() {
   return (
     <div className='Nav'>
-        <div className="navbar h-full bg-neutral text-neutral-content">
+        <div className="navbar h-full bg-cyan-600 text-cyan-600-content">
           <div className="navbar-start h-full">
             {/* <img className='img h-full btn btn-ghost' src='logo.png' alt='logo' ></img> */}
             <a className="btn btn-ghost text-xl">Scheduler4U</a>
@@ -12,9 +12,9 @@ function Nav() {
             
           <div className="navbar-end">
             <div className="join join-horizontal lg:join-horizontal ">
-                <ion-icon size="large" className="join-item bg-neutral text-neutral-content" name="globe-outline"></ion-icon>
+                <ion-icon size="large" className="join-item bg-cyan-600 text-cyan-600-content" name="globe-outline"></ion-icon>
                 <span><button className='join-item'>
-                    <select className="select select-bordered w-full max-w-xs">
+                    <select className="select select-bordered w-2/3 max-w-xs text-cyan-600-content">
                         {/* Language need not be selected only disabled */}
                         <option disabled selected>Language</option>
                         <option selected>EN</option>
