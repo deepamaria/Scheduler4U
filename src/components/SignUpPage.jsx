@@ -1,3 +1,4 @@
+import Backendless from 'backendless';
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -6,13 +7,15 @@ function SignUpPage() {
 const navigate= useNavigate();
 
 function registerHandler(e){
+  // for any form preventDefault has to be called to avoid refeshing of the form on submitting the form
   e.preventDefault();
+
   function userRegistered( user )
   {
   console.log(e.target.fullname.value);
   console.log(e.target.email.value);
   console.log(e.target.password.value);
-  console.log( "user has been registered" );
+  console.log( "user has been registered");
   }
 
 function gotError( err ) // see more on error handling
@@ -20,6 +23,20 @@ function gotError( err ) // see more on error handling
   console.log( "error message - " + err.message );
   console.log( "error code - " + err.statusCode );
 }
+
+// code snippet to create a user object
+var user = new Backendless.User();
+user.name=e.target.fullname.value;
+user.email = e.target.email.value;
+user.password = e.target.password.value;
+
+// Code snippet for registering a user "user" into backendless
+// this is a promise function
+Backendless.UserService.register( user )
+.then( userRegistered )
+.catch( gotError );
+
+navigate("/login")
 }
 
 
