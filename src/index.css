@@ -55,19 +55,39 @@ code {
   height: 80%;
   width: 100%;
   background-color: bisque;
-  padding: 3%;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
+ .StartingPage{
+  height: 90%;
+  width: 92%;
+ }
+
+ .MainPage{
+  height: 95%;
+  width: 100%;
+ }
 .Footer{
   height: 10%;
   width: 100%;
 }
 
+
+/* .MainPage{
+  height: 75%;
+  width: 100%;
+} */
 .bottomSide span{
-  color: rgb(7, 7, 175);
+  color: #06b6d4;
 }
 
 .RightSide span{
-  color: rgb(7, 7, 175);
+  color: #06b6d4;
 }
 
+/* img{
+  max-height: 100%;
+  max-width: 100%;
+} */
