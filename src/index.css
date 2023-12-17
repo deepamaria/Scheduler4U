@@ -60,7 +60,7 @@ code {
   align-items: center;
  }
 
- .StartingPage, .SignUpPage, .LoginPage, .ProfilePage, .MyCalendar{
+ .StartingPage, .SignUpPage, .LoginPage, .ProfilePage, .MyCalendar, .AddEvent{
   height: 90%;
   width: 92%;
  }
