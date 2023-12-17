@@ -8,6 +8,7 @@ import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import ProfilePage from './components/ProfilePage';
 import MyCalendar from './components/MyCalendar';
+import Todos from './components/Todos';
 import AddEventPage from './components/AddEventPage';
 import ErrorPage from './components/ErrorPage';
 import Backendless from 'backendless';
@@ -37,6 +38,7 @@ const [isuserLoggedIn, setisuserLoggedIn] = useState(false)
         <Route path='/login' element={<LoginPage setisuserLoggedIn={setisuserLoggedIn}/>} />
         <Route path='/profile' element={<ProfilePage/>} />
         <Route path='/calendar' element={<MyCalendar/>} />
+        <Route path='/todos' element={<Todos/>}/>
         <Route path='/addevent' element={<AddEventPage/>} />
         <Route path='/*' element={<ErrorPage/>} />
       </Routes>
