@@ -2,7 +2,7 @@ import Backendless from 'backendless';
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-function ProfilePage({setisuserLoggedIn}) {
+function ProfilePage({setisuserLoggedIn,setevent2}) {
 
   const navigate=useNavigate();
   
@@ -11,7 +11,7 @@ function ProfilePage({setisuserLoggedIn}) {
     console.log( "user has been logged out" );
     
     // clear the states of events of one user 
-                          // setevent2(i=>[]);   
+    setevent2(i=>[]);   
     // clear the isuserLoggedIn state to false
     setisuserLoggedIn(i=>(false));
     // console.log(event2);
@@ -51,7 +51,7 @@ function ProfilePage({setisuserLoggedIn}) {
         <Link to={'/calendar'}>
            <button className='h-32 w-32 btn btn-cyan-600 bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Calendar</button>
         </Link>
-        
+
          <Link to={'/todos'}>
            <button className='h-32 w-32 btn btn-cyan-600 bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Tasks/ Todos</button>
         </Link>
