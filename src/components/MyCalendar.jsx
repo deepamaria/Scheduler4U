@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Backendless from 'backendless'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -8,7 +7,6 @@ import interactionPlugin from "@fullcalendar/interaction"
 import listPlugin from '@fullcalendar/list';
 
 function MyCalendar({event2}) {
-
 
   function renderEventContent(eventInfo) {
     return (
