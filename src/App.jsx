@@ -12,6 +12,8 @@ import Todos from './components/Todos';
 import AddEventPage from './components/AddEventPage';
 import ErrorPage from './components/ErrorPage';
 import Backendless from 'backendless';
+import ViewEventsPage from './components/ViewEventsPage';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 
 function App() {
@@ -49,8 +51,66 @@ const [event2, setevent2] = useState([{
       <div className='MainContainer'>
 
       {/* God is Great */}
-
       <Routes>
+          <Route path="/" element={<StartingPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          
+          <Route
+            path="/login"
+            element={<LoginPage setisuserLoggedIn={setisuserLoggedIn} />}
+          />
+
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoutes isuserLoggedIn={isuserLoggedIn} setisuserLoggedIn={setisuserLoggedIn} setevent2={setevent2}>
+                {" "}
+                <ProfilePage isuserLoggedIn={isuserLoggedIn} setisuserLoggedIn={setisuserLoggedIn} setevent2={setevent2}/>{" "}
+              </ProtectedRoutes>
+            }
+          />
+
+          <Route path="/todos" element={<ProtectedRoutes isuserLoggedIn={isuserLoggedIn}>
+            <Todos />
+            </ProtectedRoutes>} />
+ 
+          <Route
+            path="/calendar"
+            element={
+              <ProtectedRoutes isuserLoggedIn={isuserLoggedIn}>
+              <MyCalendar
+                  event2={event2}
+                />
+                </ProtectedRoutes>
+            }
+          />
+  
+          <Route
+            path="addevent"
+            element={
+              <ProtectedRoutes isuserLoggedIn={isuserLoggedIn}> 
+              <AddEventPage
+                 setevent2={setevent2}
+              />
+              </ProtectedRoutes>}
+          />
+          <Route
+            path="viewevents" 
+            element={
+              <ProtectedRoutes isuserLoggedIn={isuserLoggedIn} setevent2={setevent2} event2={event2}>
+
+              <ViewEventsPage
+                event2={event2}
+                setevent2={setevent2}
+                />
+                </ProtectedRoutes>
+            }
+          />
+
+          <Route path="/*" element={<ErrorPage/>} />
+        </Routes>
+
+      {/* <Routes>
         <Route path='/' element={<StartingPage/>} />
         <Route path='/signup' element={<SignUpPage/>} />
         <Route path='/login' element={<LoginPage setisuserLoggedIn={setisuserLoggedIn}/>} />
@@ -59,7 +119,7 @@ const [event2, setevent2] = useState([{
         <Route path='/todos' element={<Todos/>}/>
         <Route path='/addevent' element={<AddEventPage/>} />
         <Route path='/*' element={<ErrorPage/>} />
-      </Routes>
+      </Routes> */}
       
       </div>
       

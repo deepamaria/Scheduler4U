@@ -33,11 +33,11 @@ function MyCalendar({event2}) {
 
         }
 
-        footerToolbar= {
-          {
-            center: 'prevYear,prev,next,nextYear' // will normally be on the left. if RTL, will be on the right
-          }
-        } 
+        // footerToolbar= {
+        //   {
+        //     center: 'prevYear,prev,next,nextYear' // will normally be on the left. if RTL, will be on the right
+        //   }
+        // } 
        height={"70vh"}   
 
         events={event2}
