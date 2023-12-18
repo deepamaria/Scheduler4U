@@ -19,14 +19,14 @@ function AddEventPage({setevent2}) {
     const place=e.target.placeText.value;
     const description=e.target.descriptionText.value;
 
-    // log Event Details
-    // console.log(titleEvent);
-    // console.log(fromDate);
-    // console.log(toDate);
-    // console.log(colorEvent);
-    // console.log(category);
-    // console.log(place);
-    // console.log(description);
+            // log Event Details
+            // console.log(titleEvent);
+            // console.log(fromDate);
+            // console.log(toDate);
+            // console.log(colorEvent);
+            // console.log(category);
+            // console.log(place);
+            // console.log(description);
 
     // Eventobject creation for backendless
     const EventObject={
@@ -49,7 +49,7 @@ function AddEventPage({setevent2}) {
             //  set event to old and add the new save event
                         // console.log("Event saving"+savedObject);
             // saving newobject
-            // setevent2(i=>[...i,savedObject])
+              // setevent2(i=>[...i,savedObject])
         })
         .catch( function( error ) {
                         // console.log( "an error has occurred " + error.message );
@@ -62,7 +62,6 @@ function AddEventPage({setevent2}) {
         .then( function( result ) {
                           // console.log("Events from User"+result);
             setevent2(i=>[...i,result]);
-          // every loaded object from the "Contact" table is now an individual untyped
          // JS object in the "result" array
         })
         .catch( function( error ) {
@@ -83,8 +82,6 @@ function AddEventPage({setevent2}) {
           display:'auto',
         };
         
-        // setEvents(events=>[...events, newEvent]);
-
         setevent2(event2=>[...event2, newEvent]);
         
         navigate("/calendar")

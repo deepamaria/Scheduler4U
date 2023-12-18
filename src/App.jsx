@@ -42,8 +42,10 @@ const [event2, setevent2] = useState([{
                           console.log(res);
         setevent2(res);
       })
-      .catch((err) => 
-                          console.log(err));
+      .catch(
+        (err) =>
+         console.log(err) 
+                          );
   }, [isuserLoggedIn]);
 
   return (
