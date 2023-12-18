@@ -43,7 +43,7 @@ navigate("/login")
   return (
     <div className='SignUpPage flex h-full w-full'>
 
-        <div className='SignUp h-full w-full'>
+        <div className='SignUp h-full w-full lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-5'>
             <h1 className='text-2xl font-bold text-center'>Sign Up for your Scheduler4U Account</h1>
         <div className="card w-full max-w-sm shadow-2xl bg-cyan-500">
       

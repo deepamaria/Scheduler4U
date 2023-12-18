@@ -39,8 +39,8 @@ function LoginPage({setisuserLoggedIn}) {
       }
 
   return (
-    <div className='LoginPage flex h-full w-full'>
-    <div className='Login h-full w-full'>
+    <div className='LoginPage flex h-full w-full lg:justify-center lg:items-center'>
+    <div className='Login h-full w-full lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-5 '>
             <h1 className='text-2xl font-bold text-center'>Welcome back to Scheduler4U</h1>
             <h1 className='text-1xl font-bold text-center'> Login to your Account to get back to your hub for scheduling your Activities</h1>
     <div className="card w-full max-w-sm shadow-2xl bg-cyan-500">

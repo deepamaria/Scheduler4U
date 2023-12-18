@@ -112,7 +112,7 @@ function AddEventPage({setevent2}) {
 
           <div className="form-control">
           <label htmlFor="favcolor">Color:</label>
-             <input required className="color input-bordered" type="color" id="favcolor" name="favcolor" ></input>
+             <input required className="color input-bordered w-full max-w-sm" type="color" id="favcolor" name="favcolor" ></input>
 
           <label htmlFor="category"></label>
              <select  className="select input-bordered w-full max-w-sm" name="category" id="category" >
