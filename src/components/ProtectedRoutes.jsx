@@ -5,7 +5,7 @@ function ProtectedRoutes({isuserLoggedIn,children}) {
  const navigate=useNavigate()
     return (
     <div>
-        {isuserLoggedIn ? children : <button>Login</button>}
+        {isuserLoggedIn ? children : <button>You have to Login to view your applications.</button>}
     </div>
   )
 }

@@ -33,12 +33,12 @@ function MyCalendar({event2}) {
 
         }
 
-        // footerToolbar= {
-        //   {
-        //     center: 'prevYear,prev,next,nextYear' // will normally be on the left. if RTL, will be on the right
-        //   }
-        // } 
-       height={"70vh"}   
+        footerToolbar= {
+          {
+            center: 'prevYear,prev,next,nextYear' // will normally be on the left. if RTL, will be on the right
+          }
+        } 
+       height={"75vh"}   
 
         events={event2}
         eventContent={renderEventContent}
@@ -50,11 +50,11 @@ function MyCalendar({event2}) {
 
 {/* buttons created below the Calendar */}
         <div className='buttonContainer flex gap-5 justify-center'>
-          <Link to="/profile"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Dashboard</button></Link>
+          <Link to="/profile"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-sm lg:btn-sm bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Dashboard</button></Link>
               {/* Button to Add Events to the calendar */}
-          <Link to="/addevent"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Add Event</button></Link>
+          <Link to="/addevent"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-sm lg:btn-sm bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>Add Event</button></Link>
               {/*  Add buttons View Events to edit and Delete  */}    
-          <Link to="/viewevents"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>View Events</button></Link>
+          {/* <Link to="/viewevents"><button className='btn btn-cyan500 btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gradient-to-r from-cyan-500 shadow-2xl shadow-cyan-500/50'>View Events</button></Link> */}
         </div>
 
     </div>
