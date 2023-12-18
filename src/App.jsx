@@ -39,10 +39,11 @@ const [event2, setevent2] = useState([{
     Backendless.Data.of("Event")
       .find()
       .then((res) => {
-        console.log(res);
+                          console.log(res);
         setevent2(res);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => 
+                          console.log(err));
   }, [isuserLoggedIn]);
 
   return (

@@ -14,20 +14,20 @@ function ProfilePage({setisuserLoggedIn,setevent2}) {
 
   function success( result )
   { 
-    console.log( "Is login valid?: " + result );
+                    console.log( "Is login valid?: " + result );
   } 
   
   function error( err ) 
   { 
-    console.log( err.message );
-    console.log( err.statusCode );
+                        console.log( err.message );
+                        console.log( err.statusCode );
   } 
   
   // function for logging out from backendless
 
   function userLoggedOut()
   {
-    console.log( "user has been logged out" );
+                        console.log( "user has been logged out" );
     
     // clear the states of events of one user 
     setevent2(i=>[]);   
@@ -42,8 +42,8 @@ function ProfilePage({setisuserLoggedIn,setevent2}) {
   
   function gotError( err ) // see more on error handling
   {
-    console.log( "error message - " + err.message );
-    console.log( "error code - " + err.statusCode );
+                        console.log( "error message - " + err.message );
+                        console.log( "error code - " + err.statusCode );
   }
 
  function logoutHandler(){

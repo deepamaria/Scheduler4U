@@ -20,13 +20,13 @@ function AddEventPage({setevent2}) {
     const description=e.target.descriptionText.value;
 
     // log Event Details
-    console.log(titleEvent);
-    console.log(fromDate);
-    console.log(toDate);
-    console.log(colorEvent);
-    console.log(category);
-    console.log(place);
-    console.log(description);
+    // console.log(titleEvent);
+    // console.log(fromDate);
+    // console.log(toDate);
+    // console.log(colorEvent);
+    // console.log(category);
+    // console.log(place);
+    // console.log(description);
 
     // Eventobject creation for backendless
     const EventObject={
@@ -45,14 +45,14 @@ function AddEventPage({setevent2}) {
     // saving event inputs and other values to Backendless Events Table
         Backendless.Data.of( "Event" ).save( EventObject )
         .then( function( savedObject ) {
-            console.log( "new Event instance has been saved" );
+                      console.log( "new Event instance has been saved" );
             //  set event to old and add the new save event
-            console.log("Event saving"+savedObject);
+                      console.log("Event saving"+savedObject);
             // saving newobject
             // setevent2(i=>[...i,savedObject])
         })
         .catch( function( error ) {
-            console.log( "an error has occurred " + error.message );
+                      console.log( "an error has occurred " + error.message );
         });
     
 
@@ -60,7 +60,7 @@ function AddEventPage({setevent2}) {
         // retrieving events of individual user from Backendless
         Backendless.Data.of( "Event" ).find()
         .then( function( result ) {
-            console.log("Events from User"+result);
+                      console.log("Events from User"+result);
             setevent2(i=>[...i,result]);
           // every loaded object from the "Contact" table is now an individual untyped
          // JS object in the "result" array
