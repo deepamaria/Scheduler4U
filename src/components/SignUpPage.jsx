@@ -12,16 +12,16 @@ function registerHandler(e){
 
   function userRegistered( user )
   {
-  console.log(e.target.fullname.value);
-  console.log(e.target.email.value);
-  console.log(e.target.password.value);
-  console.log( "user has been registered");
+                        // console.log(e.target.fullname.value);
+                        // console.log(e.target.email.value);
+                        // console.log(e.target.password.value);
+                        // console.log( "user has been registered");
   }
 
 function gotError( err ) // see more on error handling
 {
-  console.log( "error message - " + err.message );
-  console.log( "error code - " + err.statusCode );
+                        // console.log( "error message - " + err.message );
+                        // console.log( "error code - " + err.statusCode );
 }
 
 // code snippet to create a user object

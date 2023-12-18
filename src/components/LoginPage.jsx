@@ -8,8 +8,8 @@ function LoginPage({setisuserLoggedIn}) {
 
   function userLoggedIn( user )
     {
-        console.log(user);
-        console.log( "user has logged in" );
+                        // console.log(user);
+                        // console.log( "user has logged in" );
 
         // userLoggedIn state updated to true 
         setisuserLoggedIn(i=>(true));
@@ -17,8 +17,8 @@ function LoginPage({setisuserLoggedIn}) {
     
     function gotError( err ) // see more on error handling
     {
-        console.log( "error message - " + err.message );
-        console.log( "error code - " + err.statusCode );
+                          // console.log( "error message - " + err.message );
+                          // console.log( "error code - " + err.statusCode );
     }
 
 
